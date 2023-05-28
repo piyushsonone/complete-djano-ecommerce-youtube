@@ -1,7 +1,6 @@
-from django.urls import path
+from django.conf.urls import url
 from products.views import get_product
 
 urlpatterns = [
-   
-    path('<slug>/' , get_product , name="get_product"),
+    url(r'^(?P<slug>[\w-]+)/$', get_product, name='get_product'),
 ]
